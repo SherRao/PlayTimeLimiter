@@ -1,0 +1,135 @@
+#####################################
+#                                   #
+#   PlayTimeLimiter - Config File   #
+#                                   #
+#       Developed by SherRao        #
+#                                   #  
+#####################################
+#
+#
+# <--- Anything with this before it means it is a comment, it can be changed to your liking
+# You can even add your own comments!
+#
+#
+# [String/Color Codes]
+# Color codes (the '&' symbol) can be used for formatting in strings, you can set them to 'null' to disable a message 
+# You can find a list of all color codes here: http://wiki.ess3.net/mc/
+# 
+#
+# [Sound ID's] 
+# Sound ID's can be used where necessary, you can set them to 'null' to disable a sound
+# You can find Sound ID's for each Minecraft version here:
+#
+# (1.7/1.8) https://jd.bukkit.org/org/bukkit/Sound.html 
+# (1.9) https://web.archive.org/web/20150919025029/https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+# (Latest) https://hub.spigotmc.org/javadocs/spigot#
+#
+#
+# [Block/Item ID's]
+# Sound/Block ID's can be used where necessary
+# You can find Block/Sound ID's for each item/block here: https://jd.bukkit.org/org/bukkit/Material.html
+#
+
+
+# Should the plugin be enabled?
+#  Acceptable = [true|false]
+enabled: true
+
+
+# Should the plugin log all messages or just error messages to the console?
+#  Acceptable = [true|false]
+verbose: true
+
+
+
+####################################
+# Global configuration for timings #
+####################################
+#
+#  Acceptable = [Time (in seconds)]
+timings:
+
+    # The time a player is allowed to play on the server    
+    max-time-allowed: 180   
+
+    # The time between each iteration over the server
+    # **NOTE**: LEAVE THIS AS 1 SECOND UNLESS YOU'RE DEBUGGING!
+    refresh-rate: 1
+
+
+
+#############################################################
+# Global configuration for reminders for players' play-time #
+#############################################################
+reminders:
+        
+    # Declare all messages and/or sounds that will be sent to the player here
+    #  Acceptable = [Numbers]
+    declare: [ 180, 120, 60, 30, 20, 10, 5, 4, 3, 2, 1 ]
+
+
+    # All declared messages that get sent to the player at the specified time(s)
+    messages:
+        180: "&aYou have 3 minutes left of play-time!"
+        120: "&aYou have 2 minutes left of play-time!"
+        60: "&aYou have 1 minute left of play-time!"
+        30: "&aYou have 30 seconds left of play-time!"
+        20: "&aYou have 20 seconds left of play-time!"
+        10: "&aYou have 10 seconds left of play-time!"
+        5: "&aYou have 5 seconds left of play-time!"
+        4: "&aYou have 4 seconds left of play-time!"
+        3: "&aYou have 3 seconds left of play-time!"
+        2: "&aYou have 2 seconds left of play-time!"
+        1: "&aYou have 1 second left of play-time!"
+
+
+    # All declared sounds that get played to the player at the specified time(s)
+    sounds:
+        180: "ENTITY_GHAST_DEATH"
+        120: "ENTITY_GHAST_DEATH"
+        60: "ENTITY_BLAZE_DEATH"
+        30: "ENTITY_BLAZE_DEATH"
+        20: "ENTITY_BLAZE_DEATH"
+        10: "ENTITY_BLAZE_DEATH"
+        5: "BLOCK_ANVIL_BREAK"
+        4: "BLOCK_ANVIL_BREAK"
+        3: "BLOCK_ANVIL_BREAK"
+        2: "BLOCK_ANVIL_BREAK"
+        1: "BLOCK_ANVIL_BREAK"
+    
+    
+
+############################################
+# Global configuration for plugin-messages #
+############################################
+#
+#  Acceptable = [String/Color Codes]
+messages:
+
+    # Message sent to the player when they're kicked
+    kick:
+        - "&6You have surpased your limit of playing today!"
+        - ""
+        - "&6You can buy more play-time here:"
+        - "      &a&oexample.com/store"
+
+    # Message announced to the server when a player is kicked
+    announce: "&6&o[player] &ahas reached the limit of playing today!"
+    
+    
+    
+##########################################
+# Global configuration for plugin-sounds #
+##########################################
+#
+#  Acceptable = [Sounds ID's]  
+sounds:
+
+    # Sound played to the player when they're kicked
+    kick: "BLOCK_ANVIL_USE"
+    
+    # Sound played to all players when a player is kicked
+    announce: "ENTITY_BLAZE_DEATH"
+    
+    
+        

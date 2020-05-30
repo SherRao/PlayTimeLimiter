@@ -1,0 +1,9 @@
+name: PlayTimeLimiter
+version: 1.4_MC-1.10.2
+description: PlayTimeLimiter
+author: SherRao
+
+main: tk.sherrao.bukkit.ptl.PlayTimeLimiter
+prefix: PlayTimeLimiter
+database: false
+        
